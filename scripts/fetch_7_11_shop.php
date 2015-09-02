@@ -92,7 +92,7 @@ function convertValue($type, $value) {
     } else if ($type == 'Y') {
         return floatval(trim(substr_replace($value, '.', 2, 0)));
     } else {
-        return '"' . trim($value) . '"';
+        return trim($value);
     }
 }
 
@@ -106,6 +106,13 @@ foreach ($cityids as $cityid => $cityname) {
 
     $doc = DOMDocument::loadXML($ret);
     $ele_towns = $doc->getElementsByTagName('GeoPosition');
+
+    $json = array(
+        'city_id' => $cityid,
+        'city_name' => $cityname,
+        'stores' => array(),
+    );
+
     foreach ($ele_towns as $ele_town) {
         $townname = $ele_town->getElementsByTagName('TownName')->item(0)->nodeValue;
         curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query(SearchStoreParams($cityname, $townname)));
@@ -113,15 +120,15 @@ foreach ($cityids as $cityid => $cityname) {
         $geo_doc = DOMDocument::loadXML($geo_ret);
         $ele_positions = $geo_doc->getElementsByTagName('GeoPosition');
         foreach ($ele_positions as $ele_position) {
-            echo '  {' . "\n";
+            $store = array();
             foreach ($ele_position->childNodes as $node) {
-                // 最後一行 Store_URL 會多出 ","
-                echo '    "' . $node->nodeName . '": ' . convertValue($node->nodeName, $node->nodeValue) . ',' . "\n";
+                $store[$node->nodeName] = convertValue($node->nodeName, $node->nodeValue);
             }
-            echo '  },' . "\n";
+            $json['stores'][] = $store;
         }
     }
+
+    file_put_contents($cityid . '_' . $cityname . '.json', json_encode($json, JSON_UNESCAPED_UNICODE|JSON_PRETTY_PRINT));
 }
 
-// 輸出後再手動修正多出來的逗號 XD
 curl_close($ch);
