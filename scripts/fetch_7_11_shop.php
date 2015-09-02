@@ -99,6 +99,8 @@ function convertValue($type, $value) {
 $ch = curl_init('http://emap.pcsc.com.tw/EMapSDK.aspx');
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 
+$total_count = 0;
+
 foreach ($cityids as $cityid => $cityname) {
     curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query(GetTownParams($cityid)));
     $ret = curl_exec($ch);
@@ -113,6 +115,8 @@ foreach ($cityids as $cityid => $cityname) {
         'stores' => array(),
     );
 
+    $store_list = array();
+
     foreach ($ele_towns as $ele_town) {
         $townname = $ele_town->getElementsByTagName('TownName')->item(0)->nodeValue;
         curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query(SearchStoreParams($cityname, $townname)));
@@ -124,11 +128,26 @@ foreach ($cityids as $cityid => $cityname) {
             foreach ($ele_position->childNodes as $node) {
                 $store[$node->nodeName] = convertValue($node->nodeName, $node->nodeValue);
             }
+            // 檢查店號是否有重覆
+            if (array_key_exists($store['POIID'], $store_list)) {
+                $a = json_encode($store_list[$store['POIID']]);
+                $b = json_encode($store);
+                if ($a == $b) {
+                    echo "Warning: " . $cityname . "發現重覆店號(" . $store['POIID'] . "," . $store['POIName'] . ")\n";
+                    continue;
+                }
+            } else {
+                $store_list[$store['POIID']] = $store;
+            }
             $json['stores'][] = $store;
         }
     }
 
+    echo $cityname . "店家數量：" . count($json['stores']) . "\n";
+    $total_count += count($json['stores']);
+
     file_put_contents($cityid . '_' . $cityname . '.json', json_encode($json, JSON_UNESCAPED_UNICODE|JSON_PRETTY_PRINT));
 }
 
+echo "店家數量合計：" . $total_count . "\n";
 curl_close($ch);
