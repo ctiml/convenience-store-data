@@ -1,0 +1,18 @@
+{
+    "city_name": "台南巿",
+    "stores": [
+        {
+            "NAME": "全家台南安順店",
+            "TEL": "06-3564715",
+            "POSTel": "06-7035490",
+            "px": 120.215396,
+            "py": 23.040012,
+            "addr": "台南巿安南區安和路二段166號",
+            "SERID": 50499,
+            "pkey": "013989",
+            "post": "709",
+            "all": "COFFEE,SWEETPOTATO,Photo,WiFi,icecream,Parking,Toilet,Rest,oneice",
+            "twoice": null
+        }
+    ]
+}

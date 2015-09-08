@@ -1,0 +1,122 @@
+{
+    "city_name": "澎湖縣",
+    "stores": [
+        {
+            "NAME": "全家澎湖湖西店",
+            "TEL": "06-9923338",
+            "POSTel": "06-9920856",
+            "px": 119.658961,
+            "py": 23.584972,
+            "addr": "澎湖縣湖西鄉湖西65號",
+            "SERID": 51372,
+            "pkey": "014181",
+            "post": "885",
+            "all": "COFFEE,SWEETPOTATO,WiFi,icecream,Toilet,Rest,veg,oneice",
+            "twoice": null
+        },
+        {
+            "NAME": "全家澎湖吉貝店",
+            "TEL": "06-",
+            "POSTel": "06-",
+            "px": 119.609046,
+            "py": 23.739881,
+            "addr": "澎湖縣白沙鄉吉貝183號",
+            "SERID": 50781,
+            "pkey": "010781",
+            "post": "884",
+            "all": "COFFEE,SWEETPOTATO,icecream,Rest,veg,oneice",
+            "twoice": null
+        },
+        {
+            "NAME": "全家澎湖赤崁店",
+            "TEL": "06-9932052",
+            "POSTel": "06-9931134",
+            "px": 119.600133,
+            "py": 23.665329,
+            "addr": "澎湖縣白沙鄉赤崁9-29號",
+            "SERID": 50357,
+            "pkey": "010357",
+            "post": "884",
+            "all": "COFFEE,SWEETPOTATO,Photo,WiFi,icecream,Parking,Toilet,Rest,veg,oneice",
+            "twoice": null
+        },
+        {
+            "NAME": "全家澎湖鑫科店",
+            "TEL": "06-9265145",
+            "POSTel": "06-",
+            "px": 119.578127,
+            "py": 23.574531,
+            "addr": "澎湖縣馬公市三多路118號",
+            "SERID": 50949,
+            "pkey": "010949",
+            "post": "880",
+            "all": "COFFEE,SWEETPOTATO,Photo,WiFi,icecream,Toilet,Rest,veg,oneice",
+            "twoice": null
+        },
+        {
+            "NAME": "全家澎湖朝陽店",
+            "TEL": "06-9262242",
+            "POSTel": "06-9263340",
+            "px": 119.573991,
+            "py": 23.57181,
+            "addr": "澎湖縣馬公市中華路169號",
+            "SERID": 19723,
+            "pkey": "009723",
+            "post": "880",
+            "all": "COFFEE,SWEETPOTATO,Photo,WiFi,icecream,Rest,veg,oneice,muffin",
+            "twoice": null
+        },
+        {
+            "NAME": "全家澎湖馬公店",
+            "TEL": "06-9266458",
+            "POSTel": "06-9264557",
+            "px": 119.567633,
+            "py": 23.567282,
+            "addr": "澎湖縣馬公市重慶街61號",
+            "SERID": 19719,
+            "pkey": "009719",
+            "post": "880",
+            "all": "COFFEE,SWEETPOTATO,WiFi,icecream,Toilet,Rest,oneice",
+            "twoice": null
+        },
+        {
+            "NAME": "全家澎湖海洋店",
+            "TEL": "06-9269492",
+            "POSTel": "06-9709003",
+            "px": 119.565472,
+            "py": 23.56599,
+            "addr": "澎湖縣馬公市中正路46號",
+            "SERID": 19725,
+            "pkey": "009725",
+            "post": "880",
+            "all": "COFFEE,SWEETPOTATO,WiFi,icecream,Rest,oneice",
+            "twoice": null
+        },
+        {
+            "NAME": "全家澎湖望安店",
+            "TEL": "06-9991998",
+            "POSTel": "06-",
+            "px": 119.507396,
+            "py": 23.362014,
+            "addr": "澎湖縣望安鄉2-13號",
+            "SERID": 52984,
+            "pkey": "012984",
+            "post": "882",
+            "all": "COFFEE,SWEETPOTATO,icecream,Toilet,Rest,veg,oneice",
+            "twoice": null
+        },
+        {
+            "NAME": "全家澎湖七美店",
+            "TEL": "06-9971863",
+            "POSTel": "06-9971839",
+            "px": 119.419531,
+            "py": 23.196045,
+            "addr": "澎湖縣七美鄉南港村11鄰26-17號",
+            "SERID": 50003,
+            "pkey": "010003",
+            "post": "883",
+            "all": "COFFEE,SWEETPOTATO,Photo,icecream,Toilet,Rest,veg,oneice",
+            "twoice": null
+        }
+    ]
+}
