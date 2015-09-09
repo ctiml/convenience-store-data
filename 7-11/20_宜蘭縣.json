@@ -2408,6 +2408,35 @@
             "isMisterDonuts": "N",
             "SpecialStore_Kind": "",
             "Store_URL": ""
+        },
+        {
+            "POIID": 154541,
+            "POIName": "金玉",
+            "X": 121.797688,
+            "Y": 24.463973,
+            "Telno": "(03)9981183",
+            "FaxNo": "(03)9981173",
+            "Address": "宜蘭縣南澳鄉蘇花路二段165號1樓",
+            "isDining": "Y",
+            "isParking": "N",
+            "isLavatory": "Y",
+            "isATM": "N",
+            "is7WiFi": "N",
+            "isIce": "N",
+            "isHotDog": "N",
+            "isHealthStations": "N",
+            "isIceCream": "N",
+            "isOpenStore": "N",
+            "isFruit": "N",
+            "isCityCafe": "N",
+            "isUnionPay": "N",
+            "isOrganic": "N",
+            "isCorn": "N",
+            "isMakeup": "N",
+            "isMuji": "N",
+            "isMisterDonuts": "N",
+            "SpecialStore_Kind": "",
+            "Store_URL": ""
         }
     ]
 }
