@@ -16,6 +16,8 @@ $cities = array();
 if (preg_match('/addSmallShop\((.*)\)/s', $ret, $m)) {
     $json_array = json_decode($m[1]);
     foreach ($json_array as $json) {
+        // 修正異體字
+        $json->addr = str_replace('巿', '市', $json->addr);
         $city = mb_substr($json->addr, 0, 3, "UTF-8");
         if (!array_key_exists($city, $cities)) {
             $cities[$city] = array(
