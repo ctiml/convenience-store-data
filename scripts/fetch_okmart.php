@@ -16,8 +16,8 @@ function lookup($string){
 
     $geometry = $response['results'][0]['geometry'];
     return array(
-        'latitude' => $geometry['location']['lng'],
-        'longitude' => $geometry['location']['lat'],
+        'lng' => $geometry['location']['lng'],
+        'lat' => $geometry['location']['lat'],
         'location_type' => $geometry['location_type'],
     );
 }
@@ -50,8 +50,8 @@ foreach ($ele_cities->childNodes as $ele) {
                 $json['stores'][] = array(
                     'name' => $name,
                     'address' => $address,
-                    'lat' => $latlng['latitude'],
-                    'lng' => $latlng['longitude'], 
+                    'lat' => $latlng['lat'],
+                    'lng' => $latlng['lng'], 
                     'id' => $m[3][$i],
                 );
                 sleep(1);
