@@ -31,9 +31,9 @@ $ele_cities = $doc->getElementById('ctl00_ContentPlaceHolder1_ddlcity');
 foreach ($ele_cities->childNodes as $ele) {
     $city = trim($ele->getAttribute('value'));
     echo $city . "\n";
-    if (in_array($city, array('基隆市', '台北市', '新北市', '桃園市'))) {
-        continue;
-    }
+    //if (in_array($city, array('基隆市', '台北市', '新北市', '桃園市'))) {
+    //    continue;
+    //}
     if (strlen($city) > 0) {
         $json = array(
             'city_name' => $city,
